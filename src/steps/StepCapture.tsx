@@ -1,10 +1,8 @@
 import { useState } from "react";
 import ProvenanceTag from "../components/ProvenanceTag";
 
-const ORIGINAL_URL =
-  "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&h=700&fit=crop&auto=format";
-const STUDIO_URL =
-  "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&h=700&fit=crop&auto=format&sat=-30&con=10";
+const ORIGINAL_URL = "/before.png";
+const STUDIO_URL = "/after.jpeg";
 
 interface Props { onNext: () => void }
 
@@ -51,7 +49,7 @@ export default function StepCapture({ onNext }: Props) {
               src={ORIGINAL_URL}
               alt="Product photo preview"
               className="w-full h-full object-cover opacity-90"
-              style={{ filter: "saturate(1.1) brightness(0.85)" }}
+              style={{ filter: "brightness(0.85)" }}
             />
             {/* Frame guide */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -120,14 +118,14 @@ export default function StepCapture({ onNext }: Props) {
               >
                 <div className="relative" style={{ aspectRatio: "3/4" }}>
                   <img
-                    src={ORIGINAL_URL}
+                    src={key === "studio" ? STUDIO_URL : ORIGINAL_URL}
                     alt={label}
                     className="w-full h-full object-cover"
                     style={{
                       filter:
                         key === "studio"
-                          ? "saturate(0.95) brightness(1.12) contrast(1.04)"
-                          : "saturate(1.1) brightness(0.82)",
+                          ? "brightness(1.05) contrast(1.02)"
+                          : "brightness(0.82)",
                     }}
                   />
                   {key === "studio" && (
@@ -203,7 +201,7 @@ export default function StepCapture({ onNext }: Props) {
               </span>
               <span style={{ color: "var(--muted-foreground)" }}>
                 {" "}— hue is never shifted. Only exposure and white balance are corrected.
-                The red saree stays red.
+                The terracotta pot stays terracotta.
               </span>
             </div>
           </div>

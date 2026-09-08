@@ -9,11 +9,11 @@ const ASPIRATIONAL = 14500;
 
 const BREAKDOWN = {
   floor: [
-    { label: "Silk yarn (340g × ₹12/g)", value: "₹4,080" },
-    { label: "Zari (real, 18g)", value: "₹720" },
-    { label: "Labour (21 days × ₹40/hr × 6hr)", value: "₹5,040" },
-    { label: "Overhead (5%)", value: "₹492" },
-    { label: "Raw total", value: "₹10,332", bold: true },
+    { label: "Red clay (12 kg × ₹18/kg)", value: "₹216" },
+    { label: "Natural pigments & finish", value: "₹180" },
+    { label: "Labour (3 days × ₹40/hr × 8hr)", value: "₹960" },
+    { label: "Kiln firing (shared cost)", value: "₹140" },
+    { label: "Raw total", value: "₹1,496", bold: true },
     { label: "Floor price (60% of cost + overhead)", value: "₹5,800", bold: true },
   ],
   rec: [

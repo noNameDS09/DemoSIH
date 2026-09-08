@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProvenanceTag from "../components/ProvenanceTag";
 
-interface Props { onBack: () => void }
+interface Props { onBack: () => void; onDone?: () => void }
 
 type BadgeStatus = "green" | "amber" | "red";
 
@@ -13,7 +13,7 @@ const BADGE_COLOR: Record<BadgeStatus, string> = {
 
 const SCHEMES = [
   { name: "PM Vishwakarma", status: "green" as BadgeStatus, since: "March 2024", id: "PMV-UP-2024-009a3b" },
-  { name: "ODOP — Varanasi Silk", status: "green" as BadgeStatus, since: "Jan 2023", id: "ODOP-UP-VNS-0041" },
+  { name: "ODOP — Nizamabad Pottery", status: "green" as BadgeStatus, since: "Jan 2023", id: "ODOP-UP-NZB-0041" },
   { name: "MUDRA Shishu", status: "amber" as BadgeStatus, since: "Pending sync", id: "—" },
 ];
 
@@ -29,7 +29,7 @@ const PROVENANCE_EVENTS = [
   { ts: "14:25:04", source: "pehchan-registry-v2", label: "Gov badge lookup", conf: 0.97 },
 ];
 
-export default function StepVerify({ onBack }: Props) {
+export default function StepVerify({ onBack, onDone }: Props) {
   const [buyerView, setBuyerView] = useState(false);
   const [auditOpen, setAuditOpen] = useState(false);
 
@@ -88,7 +88,7 @@ export default function StepVerify({ onBack }: Props) {
                   </h3>
                 </div>
                 <p className="text-sm" style={{ color: "var(--muted-foreground)" }}>
-                  ADI-9a3b · Cluster: Varanasi Silk, UP
+                   ADI-9a3b · Cluster: Nizamabad Pottery, UP
                 </p>
                 <p
                   className="text-xs mt-1"
@@ -231,8 +231,8 @@ export default function StepVerify({ onBack }: Props) {
 
             <div className="p-5">
               <img
-                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop&auto=format"
-                alt="Banarasi silk saree"
+                src="/after.jpeg"
+                alt="Terracotta water pot"
                 className="w-full h-40 object-cover rounded-xl mb-4"
                 style={{ filter: "saturate(0.95) brightness(1.1)" }}
               />
@@ -241,17 +241,17 @@ export default function StepVerify({ onBack }: Props) {
                 className="text-lg font-semibold"
                 style={{ fontFamily: "var(--font-lora)", color: "var(--foreground)" }}
               >
-                Banarasi Silk Saree — Kadhua Weave
+                Traditional Terracotta Water Pot — Hand-Thrown
               </h2>
               <p className="text-sm mt-0.5" style={{ color: "var(--muted-foreground)" }}>
-                बनारसी सिल्क साड़ी · Sunita Devi
+                पारंपरिक टेराकोटा मटका · Ramesh Kumar
               </p>
 
               <div
                 className="mt-3 text-2xl font-bold"
                 style={{ fontFamily: "var(--font-lora)", color: "var(--secondary)" }}
               >
-                ₹9,200
+                ₹1,800
               </div>
 
               {/* Badges */}
@@ -262,7 +262,7 @@ export default function StepVerify({ onBack }: Props) {
                 >
                   <span style={{ color: "#4CAF50", fontWeight: 600 }}>✓</span>
                   <span style={{ color: "var(--foreground)" }}>
-                    Pehchan-verified · ADI-9a3b · Member of PM Vishwakarma
+                     Pehchan-verified · ADI-9a3b · Member of PM Vishwakarma
                   </span>
                 </div>
                 <div
@@ -271,7 +271,7 @@ export default function StepVerify({ onBack }: Props) {
                 >
                   <span>🏺</span>
                   <span style={{ color: "var(--foreground)" }}>
-                    Banarasi Brocades — GI-registered product
+                    Nizamabad Black Pottery — GI-registered product
                   </span>
                 </div>
                 <div
@@ -323,14 +323,14 @@ export default function StepVerify({ onBack }: Props) {
           className="text-base font-semibold mb-2"
           style={{ fontFamily: "var(--font-lora)" }}
         >
-          What this means for Sunita Devi
+          What this means for Ramesh Kumar
         </h3>
         <p className="text-sm leading-relaxed opacity-85">
-          A 42-year-old Varanasi silk weaver. Currently sells through a master weaver who pays ₹2,800 for a saree
-          that retails at ₹18,000. Her daughter wants to be a doctor. With KalaSetu: the same saree, the same skill,
-          a verified listing, a fair price — and the buyer sees exactly why the saree is worth it.
-          Master-weaver path: ₹2,800. KalaSetu path: ₹13,500.{" "}
-          <strong>The platform removed 30 seconds of friction.</strong>
+           A 38-year-old Nizamabad potter from Uttar Pradesh. Currently sells through a middleman who pays ₹280 for a
+           water pot that retails at ₹1,800. His son wants to study engineering. With KalaSetu: the same pot, the same skill,
+           a verified listing, a fair price — and the buyer sees exactly why the pot is worth it.
+           Middleman path: ₹280. KalaSetu path: ₹1,350.{" "}
+           <strong>The platform removed 30 seconds of friction.</strong>
         </p>
       </div>
 
@@ -342,12 +342,13 @@ export default function StepVerify({ onBack }: Props) {
         >
           ← Back
         </button>
-        <div
-          className="px-6 py-2.5 rounded-full text-sm font-semibold"
-          style={{ background: "var(--muted)", color: "var(--muted-foreground)" }}
+        <button
+          onClick={onDone}
+          className="px-6 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105"
+          style={{ background: "var(--primary)", color: "var(--primary-foreground)" }}
         >
-          Demo complete · ~3 min flow ✓
-        </div>
+          ↩ Back to Dashboard
+        </button>
       </div>
     </div>
   );

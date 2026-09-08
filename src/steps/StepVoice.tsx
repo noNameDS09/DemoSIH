@@ -4,22 +4,22 @@ import ProvenanceTag from "../components/ProvenanceTag";
 interface Props { onNext: () => void; onBack: () => void }
 
 const SLOT_FILL = {
-  title_hi: "बनारसी सिल्क साड़ी — कढुआ तकनीक",
-  title_en: "Banarasi Silk Saree — Kadhua Weave",
+  title_hi: "पारंपरिक टेराकोटा मटका — हाथ से बनाया गया",
+  title_en: "Traditional Terracotta Water Pot — Hand-Thrown",
   description_hi:
-    "काशी की खड्डी पर बुनी यह साड़ी शुद्ध रेशम और असली जरी से तैयार की गई है। कढुआ तकनीक में हर बूटी को अलग से बुना जाता है, जिसमें तीन सप्ताह का समय लगता है।",
+    "काशी की मिट्टी से बना यह मटका शुद्ध लाल मिट्टी और प्राकृतिक रंगों से तैयार किया गया है। हर मटके को चाक पर हाथ से आकार दिया जाता है, जिसमें दो से तीन दिन का समय लगता है।",
   description_en:
-    "Woven on a handloom in Kashi, this saree is crafted from pure mulberry silk with real zari. Each motif in the kadhua technique is woven individually — three weeks of continuous work by one weaver.",
+    "Crafted from pure red clay sourced near Varanasi, this water pot is hand-thrown on a traditional wheel and finished with natural pigments. Each piece takes two to three days of continuous work by one potter.",
   attributes: {
-    Material: "Pure mulberry silk + real zari",
-    Technique: "Kadhua hand-weaving",
-    Cluster: "Varanasi Silk, UP",
-    Dimensions: "6.3 m × 1.1 m",
-    Colour: "Wheat, gold, brown",
-    Occasion: "Wedding / formal",
-    "Time to make": "21 days",
-    "GI tag": "Yes — Banarasi Brocades GI",
-    "Craft family": "Woven textile",
+    Material: "Pure red clay + natural pigments",
+    Technique: "Hand-thrown wheel pottery",
+    Cluster: "Nizamabad Black Pottery, UP",
+    Dimensions: "35 cm × 28 cm",
+    Colour: "Terracotta red, ochre",
+    Occasion: "Daily use / gifting",
+    "Time to make": "3 days",
+    "GI tag": "Yes — Nizamabad Black Pottery GI",
+    "Craft family": "Pottery / Ceramics",
   },
 };
 
@@ -148,8 +148,8 @@ export default function StepVoice({ onNext, onBack }: Props) {
               style={{ borderBottom: "1px solid var(--border)" }}
             >
               <img
-                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=120&h=140&fit=crop&auto=format"
-                alt="Banarasi silk saree"
+                src="/after.jpeg"
+                alt="Terracotta water pot"
                 className="w-20 h-24 object-cover rounded-lg flex-shrink-0"
                 style={{ filter: "saturate(0.95) brightness(1.1)" }}
               />
@@ -264,7 +264,7 @@ export default function StepVoice({ onNext, onBack }: Props) {
               <p className="font-semibold text-sm">Confirm-by-ear</p>
               <p className="text-xs opacity-75 mt-0.5">
                 {confirmPlayed
-                  ? "Played back in Hindi · Sunita's voice profile"
+                  ? "Played back in Hindi · Ramesh's voice profile"
                   : "Listen to the listing in your own language"}
               </p>
             </div>

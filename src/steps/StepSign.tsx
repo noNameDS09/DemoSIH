@@ -76,8 +76,8 @@ export default function StepSign({ onNext, onBack }: Props) {
           >
             <div className="flex gap-3 p-4" style={{ borderBottom: "1px solid var(--border)" }}>
               <img
-                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=100&h=120&fit=crop&auto=format"
-                alt="Banarasi silk saree"
+                src="/after.jpeg"
+                alt="Terracotta water pot"
                 className="w-16 h-20 object-cover rounded-lg flex-shrink-0"
                 style={{ filter: "saturate(0.95) brightness(1.1)" }}
               />
@@ -86,10 +86,10 @@ export default function StepSign({ onNext, onBack }: Props) {
                   className="text-sm font-semibold leading-snug"
                   style={{ fontFamily: "var(--font-lora)", color: "var(--foreground)" }}
                 >
-                  Banarasi Silk Saree — Kadhua Weave
+                  Traditional Terracotta Water Pot — Hand-Thrown
                 </h3>
                 <p className="text-xs mt-1" style={{ color: "var(--muted-foreground)" }}>
-                  Sunita Devi · Varanasi Silk
+                  Ramesh Kumar · Nizamabad Pottery Cluster
                 </p>
                 <p
                   className="text-lg font-bold mt-2"
@@ -170,8 +170,8 @@ export default function StepSign({ onNext, onBack }: Props) {
               <div className="flex-1">
                 <div className="flex gap-4">
                   <img
-                    src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=120&h=140&fit=crop&auto=format"
-                    alt="Banarasi silk saree"
+                    src="/after.jpeg"
+                    alt="Traditional Terracotta Water Pot"
                     className="w-20 h-24 object-cover rounded-lg flex-shrink-0"
                     style={{ filter: "saturate(0.95) brightness(1.1)" }}
                   />
@@ -180,10 +180,10 @@ export default function StepSign({ onNext, onBack }: Props) {
                       className="text-base font-semibold"
                       style={{ fontFamily: "var(--font-lora)", color: "var(--foreground)" }}
                     >
-                      Banarasi Silk Saree — Kadhua Weave
+                      Traditional Terracotta Water Pot — Hand-Thrown
                     </h3>
                     <p className="text-xs mt-1" style={{ color: "var(--muted-foreground)" }}>
-                      बनारसी सिल्क साड़ी — कढुआ तकनीक
+                      पारंपरिक टेराकोटा मटका — हाथ से बनाया गया
                     </p>
                     <div
                       className="mt-2 text-2xl font-bold"
@@ -193,7 +193,7 @@ export default function StepSign({ onNext, onBack }: Props) {
                     </div>
                     <div className="flex gap-2 mt-2 flex-wrap">
                       <Badge color="var(--accent)" text="🏺 GI-tagged" />
-                      <Badge color="var(--primary)" text="Kadhua weave" />
+                      <Badge color="var(--primary)" text="Wheel pottery" />
                       <Badge color="var(--secondary)" text="21 days" />
                     </div>
                   </div>
@@ -226,7 +226,7 @@ export default function StepSign({ onNext, onBack }: Props) {
                   <QRCode />
                 </div>
                 <p className="text-xs text-center" style={{ color: "var(--muted-foreground)" }}>
-                  Sunita Devi · ADI-9a3b
+                  Ramesh Kumar · ADI-9a3b
                 </p>
                 <div className="flex gap-2">
                   <button

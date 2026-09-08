@@ -1,0 +1,10 @@
+{
+  "description": "Empowering artisans, this app enhances product listings with AI-driven image processing, multilingual voice descriptions, and transparent pricing, ensuring authenticity and accessibility.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
